@@ -5,82 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primeira Aula de DOM</title>
+    <!-- Include Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <!-- //-->
   </head>
   <body>
-    <header>
-      <h1>Aula de JS - Vamos brincar com quem tem o DOM!</h1>
-    </header>
-    <section>
-      <h2>O que aprenderemos n aula de hoje:</h2>
-      <div>
-        <ul>
-          <li>O que é DOM?</li>
-          <li>Explicar a composição de elementos</li>
-          <li>W3C e os padrões estabelecidos</li>
-          <li>Capturando uns textos no console através do TagName</li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <h2>O que é o DOM?</h2>
-      <div>
-        <p>
-          O DOM (Document Object Model) é a representação de dados dos objetos
-          que compõem a estrutura e o conteúdo de um documento na Web.
-          <cite
-            >MDN - Versão pt-BR
-            <a
-              href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
+    <div class="container">
+      <header>
+        <h1>Aula de JS - Vamos brincar com quem tem o DOM!</h1>
+      </header>
+      <!-- Introdução -->
+      <section>
+        <div class="row">
+          <h2>O que aprenderemos na aula de hoje:</h2>
+          <div>
+            <ul>
+              <li>O que é DOM?</li>
+              <li>Explicar a composição de elementos</li>
+              <li>W3C e os padrões estabelecidos</li>
+              <li>Capturando uns textos no console através do TagName</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Definições de DOM-->
+      <section>
+        <h2>O que é o DOM?</h2>
+        <div class="row">
+          <p>
+            O DOM (Document Object Model) é a representação de dados dos objetos
+            que compõem a estrutura e o conteúdo de um documento na Web.
+            <cite
+              >MDN - Versão pt-BR
+              <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
+              >
+                Documentação Oficial</a
+              ></cite
             >
-              Documentação Oficial</a
-            ></cite
+          </p>
+        </div>
+        <div class="row">
+          <h3>Simplificando a ideia:</h3>
+          <img src="assets/img/aula1/arvore-dom.jpeg" alt="Árvore DOM" />
+          <cite>
+            Medium DOM…. Sempre escutamos sobre o tal DOM, mas… | by Allan
+            Barbosa | allbarbos | Medium</cite
           >
-        </p>
-      </div>
-      <div>
-        <h3>Simplificando a ideia:</h3>
-        <img src="assets/img/aula1/arvore-dom.jpeg" alt="Árvore DOM" />
-        <cite>
-          Medium DOM…. Sempre escutamos sobre o tal DOM, mas… | by Allan Barbosa
-          | allbarbos | Medium</cite
-        >
-      </div>
-      <div>
-        <h3>Uma visão diferente da mesma ideia:</h3>
-        <figure>
+        </div>
+        <div class="row">
+          <h3>Uma visão diferente da mesma ideia:</h3>
+
           <img
             src="assets/img/aula1/dom-model-simple.png"
             alt="Modelo mais simples da arvore DOM"
           />
-        </figure>
-      </div>
-    </section>
-    <section>
-      <h2>W3C o que é e qual a importância?</h2>
-      <div>
-        <p>
-          O Consórcio World Wide Web (W3C) é um consórcio internacional no qual
-          organizações filiadas, uma equipe em tempo integral e o público
-          trabalham juntos para desenvolver padrões para a Web.
-          <cite>W3C BR <a href="https://www.w3c.br/Sobre/"> W3C BR</a></cite>
-        </p>
-      </div>
-    </section>
-    <section>
-      <h2>Vamos pegar um conteúdinho aqui usando tagname?</h2>
-      <figure>
-        <img src="assets/img/aula1/exemplo-codigo-aula1.png" alt="" />
-      </figure>
-    </section>
-    <footer>
-      Bora dar uma lida na
-      <a
-        href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
-      >
-        Documentação Oficial</a
-      >
-      Nesta aula vamos brincar um pouco com a interação entre JS e HTML.
-    </footer>
+        </div>
+      </section>
+      <!-- W3C e padrões web-->
+      <section>
+        <h2>W3C o que é e qual a importância?</h2>
+        <div class="row">
+          <p>
+            O Consórcio World Wide Web (W3C) é um consórcio internacional no
+            qual organizações filiadas, uma equipe em tempo integral e o público
+            trabalham juntos para desenvolver padrões para a Web.
+            <cite>W3C BR <a href="https://www.w3c.br/Sobre/"> W3C BR</a></cite>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>Vamos pegar um conteúdinho aqui usando tagname?</h2>
+        <div class="row">
+            <img src="assets/img/aula1/exemplo-codigo-aula1.png" alt="" />
+        </div>
+      </section>
+      <footer>
+        Bora dar uma lida na
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
+        >
+          Documentação Oficial</a
+        >
+        Nesta aula vamos brincar um pouco com a interação entre JS e HTML.
+      </footer>
+    </div>
   </body>
   <script src="assets/js/aula1.js"></script>
 </html>
