@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda Aula de DOM</title>
+    <!-- Include Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <!-- //-->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Aula de JS - Compreendendo melhor o DOM</h1>
+      </header>
+      <!-- Introdução -->
+      <section>
+        <div class="row">
+          <h2>O que aprenderemos na aula de hoje:</h2>
+          <div>
+            <ul>
+              <li>Objeto Document</li>
+              <li>Nodes</li>
+              <li>Node List</li>
+              <li>Element e Attribute</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Definições de DOM-->
+      <section>
+        <h2>Objeto Document</h2>
+        <div class="row">
+          <p>
+            Para cada página carregada no browser, existe um objeto Document. A
+            interface Document serve como um ponto de entrada para o conteúdo da
+            Página ( a árvore DOM, incluindo elementos como <b>body</b> e
+            <b>table</b> ) e provê funcionalidades globais ao documento (como
+            obter a URL da página e criar novos elementos no documento).
+            <cite
+              >MDN - Versão pt-BR
+              <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document"
+              >
+                Documentação Oficial</a
+              ></cite
+            >
+          </p>
+        </div>
+      </section>
+      <!-- W3C e padrões web-->
+      <section>
+        <h2>Nodes</h2>
+        <div class="row">
+          <p>
+            É uma interface da qual diversos tipos do DOM herdam, e que permite
+            que esses tipos sejam tratados de forma similar, por exemplo,
+            herdando os mesmos métodos ou sendo testados da mesma forma.
+          </p>
+        </div>
+      </section>
+      <footer>
+        Bora dar uma lida na
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
+        >
+          Documentação Oficial</a
+        >
+        Nesta aula vamos brincar um pouco com a interação entre JS e HTML.
+      </footer>
+    </div>
+  </body>
+  <script src="assets/js/aula1.js"></script>
+</html>
