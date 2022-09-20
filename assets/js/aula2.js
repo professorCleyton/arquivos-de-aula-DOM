@@ -1,4 +1,5 @@
 
+{
 /* DOCUMENT */
 // Propriedades
 document.body; // Retorna todos elementos dentro do body
@@ -16,8 +17,8 @@ document.createElement(nomeDaTag);// Em um documento HTML, o método Document.cr
 
 //Nodes
 /*
-É uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos 
-sejam tratados de forma similar, 
+É uma interface da qual diversos tipos do DOM herdam, 
+e que permite que esses tipos sejam tratados de forma similar, 
 por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
 */
 
@@ -26,13 +27,11 @@ por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
 Objetos NodeList são coleções de nodos semelhantes aos objetos retornados 
 pelos métodos Node.childNodes e document.querySelectorAll().
 */
-const myNodeList = document.querySelectorAll("p"); // Exemplo Nodelist de paragrafos
-
+const myNodeList = document.querySelectorAll("div"); // Exemplo Nodelist de paragrafos
+//console.log(myNodeList);
 // Element
 /*
 A interface Element é a classe base mais geral da qual todos os objetos em um Document herda
 */
 const element = document.getElementById("idEspecifico");
-
-
-
+}

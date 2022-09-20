@@ -53,7 +53,7 @@
             obter a URL da página e criar novos elementos no documento).
             <cite
               >MDN - Versão pt-BR
-              <a
+              <a id="link-doc-oficial"
                 href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document"
               >
                 Documentação Oficial</a
@@ -62,17 +62,27 @@
           </p>
         </div>
       </section>
-      <!-- W3C e padrões web-->
+      <!-- Definição de nodes-->
       <section>
-        <h2>Nodes</h2>
+        <h2>Definição de nodes</h2>
         <div class="row">
-          <p>
-            É uma interface da qual diversos tipos do DOM herdam, e que permite
-            que esses tipos sejam tratados de forma similar, por exemplo,
-            herdando os mesmos métodos ou sendo testados da mesma forma.
-          </p>
+          <div class="col-6">
+            <p>É uma interface da qual diversos tipos do DOM herdam, 
+              e que permite que esses tipos sejam tratados de forma similar, 
+              por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
+            </p>
+          </div>
+          <div class="col-6">
+            <p>
+              Outro conteúdo
+            </p>
+            
+          </div>
+          
         </div>
+        
       </section>
+      <!-- -->
       <footer>
         Bora dar uma lida na
         <a
@@ -83,6 +93,37 @@
         Nesta aula vamos brincar um pouco com a interação entre JS e HTML.
       </footer>
     </div>
+    <!-- <script src="assets/js/aula2.js"></script> -->
+    <script>
+      let tituloProcurado = prompt('Digite o titulo que procura:');
+
+      let procuraTitulo = (textoDigitado) =>{ // retorna boleano
+        let titulosDOM = document.getElementsByTagName('h2');
+        for(elemento of titulosDOM){
+          if(elemento.textContent===textoDigitado){
+            return true;
+          }
+        }
+        return false;
+      }
+  
+      let exibeMensagemTitulo = (statusTitulo) =>{ // VOID
+        if(statusTitulo==true){
+          alert('O título procurado existe na página!');
+          console.log('O título procurado existe na página!')
+        }else{
+          alert('O título procurado não existe na página!');
+          console.log('O título procurado não existe na página!');
+        }
+      }
+
+      let retorno = procuraTitulo(tituloProcurado);
+      exibeMensagemTitulo(retorno);
+      let retorno2 = procuraTitulo('Teste');
+      exibeMensagemTitulo(retorno2);
+
+      // let paragrafos = document.getElementsByTagName('p');
+      // console.log(paragrafos.length);
+    </script>
   </body>
-  <script src="assets/js/aula1.js"></script>
 </html>

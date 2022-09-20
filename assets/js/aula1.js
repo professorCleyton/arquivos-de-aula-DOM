@@ -10,7 +10,7 @@ let divs = document.getElementsByTagName('div');
 //console.log(divs);
 
 let tituloPorId = document.getElementById('titulo-principal');
-//console.log(tituloPorId.textContent);
+//console.log(tituloPorId);
 
 let pegandoInputPorId = document.getElementById('nome-usuario-aplicacao');
 // console.log(pegandoInputPorId.value);
