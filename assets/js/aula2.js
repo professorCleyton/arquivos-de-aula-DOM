@@ -10,12 +10,14 @@ document.documentURI; // Recupera a URL da página que foi carregada
 
 //Métodos
 document.getElementById(); // Retorna a referência do elemento através do seu ID
-document.createElement(nomeDaTag);// Em um documento HTML, o método Document.createElement() cria o elemento HTML especificado
 document.getElementsByClassName(nomes);// Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada
+document.createElement(nomeDaTag);// Em um documento HTML, o método Document.createElement() cria o elemento HTML especificado
+
 
 //Nodes
 /*
-É uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, 
+É uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos 
+sejam tratados de forma similar, 
 por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
 */
 
