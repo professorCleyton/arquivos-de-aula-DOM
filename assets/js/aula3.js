@@ -7,11 +7,15 @@ let segundoBotao = document.getElementById("botao-valida");
 segundoBotao.onclick = () => {
   let cpf = cpfUsuario.value;
   
-  if(cpf.toString().length==11){
-    feedbackNegativo.setAttribute('hidden','true');
-    feedbackPositivo.removeAttribute('hidden');
-  }else{
-    feedbackPositivo.setAttribute('hidden','true');
-    feedbackNegativo.removeAttribute('hidden');
+  let validaCpf = (cpfRecebido) => {
+    if(cpfRecebido.toString().length==11){
+      feedbackNegativo.setAttribute('hidden','true');
+      feedbackPositivo.removeAttribute('hidden');
+    }else{
+      feedbackPositivo.setAttribute('hidden','true');
+      feedbackNegativo.removeAttribute('hidden');
+    }
   }
+
+  validaCpf(cpf);
 };

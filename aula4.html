@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quarta Aula de DOM</title>
+    <!-- Include Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <!-- //-->
+    <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cadastro de CPFs</h1>
+      </header>
+      <section>
+        <h2>Desafio</h2>
+        <p>Agora precisamos validar o CPF e se for válido vamos exbi-lo em forma de lista no HTML. </p>
+      </section>
+      <!-- Form Demonstração -->
+      <section>
+        <div class="row">
+            <form action="#"> 
+                <div class="mb-3">
+                  <label for="cpf-usuario" class="form-label">CPF</label>
+                  <input type="number" class="form-control" id="cpf-usuario" placeholder="Digite apenas números">
+                  <div id="feedback-usuario" class="form-text" hidden></div>
+                </div>
+                <button type="button" class="btn btn-primary" id="botao-valida" >Salvar</button>
+              </form>
+        </div>
+      </section>
+      <!-- -->
+      <section>
+        <h2> Lista cadastrada</h2>
+        <ul id="lista-cpf">
+
+        </ul>
+      </section>
+      <footer>
+        Bora dar uma lida na
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction"
+        >
+          Documentação Oficial</a
+        >
+        Nesta aula vamos brincar um pouco com a interação entre JS e HTML.
+      </footer>
+    </div>
+    <script>
+        // let resgatandoBotao = document.getElementById('botao-valida');
+        let resgatandoBotao = document.querySelector('.btn');
+        let elementoCpf = document.getElementById('cpf-usuario');
+        let elementoFeedback = document.getElementById('feedback-usuario');
+        let elementoLista = document.getElementById('lista-cpf');
+
+        function validaCpf(cpf){ // RETORNO BOLEANO
+            if(cpf.length ==11){
+                return true;
+            }
+            return false;
+        }
+
+        function exibirMensagem(mensagem){ // VOID
+            elementoFeedback.innerHTML = mensagem;
+            elementoFeedback.removeAttribute('hidden');
+        }
+
+        resgatandoBotao.onclick = () =>{
+            let valorCpf = elementoCpf.value; // Capturando o valor
+            valorCpf = valorCpf.toString();  // Conversão para String
+            let cpfValido = validaCpf(valorCpf); // Chamando uma função para validar CPF
+            if(cpfValido){
+                exibirMensagem("CPF Válido!"); // Chama a função para exibir a mensagem embaixo do input
+                elementoLista.innerHTML += `<li>${valorCpf}</li>`; // Preenche a lista de forma concatenada
+                //elementoLista.innerHTML += '<li>'+valorCpf+'</li>'; // Outro jeito de concatenar
+            }else{
+                exibirMensagem("CPF Inválido!");// Chama a função para exibir a mensagem embaixo do input
+            }
+          
+        }
+    </script> 
+    </script>
+  </body>
+</html>
