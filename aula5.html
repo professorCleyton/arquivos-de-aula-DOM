@@ -40,6 +40,7 @@
       <header>
         <h1>Cadastro de Produtos</h1>
       </header>
+      <!-- Enunciado do exercício-->
       <section>
         <h2>Desafio</h2>
         <ol>
@@ -94,13 +95,6 @@
       </footer>
     </div>
     <script>
-      /* 
-          1- Cadastro de produtos com código, nome , descrição(breve) e preço
-          2 - Botao Salvar deve armazenar o registro em um tipo de objeto JS
-          3 - Botao Concluir Cadastramento deve exibir uma lista com todos os 
-          produtos cadastrados, o formulário deve sumir, deve aparecer apenas 
-          a lista
-      */
       let elementoCodigo = document.getElementById('codigo-produto');
       let elementoNome = document.getElementById('nome-produto');
       let elementoDescricao = document.getElementById('descricao-produto');
@@ -140,6 +134,7 @@
         limparFormulario();
         console.log(arrayProdutos);
       }
+      
       // Chamada pelo forEach
       function exibirProdutos(elemento, chave, array){ // Tem que exibir nossos produtos na lista
         console.log(chave,elemento.codigo);
@@ -154,7 +149,7 @@
         elementoSecaoListagem.setAttribute('class','ativo');// Colocou um atributo de classe no html (ativo)
         arrayProdutos.forEach(exibirProdutos); // FOREACH
         // for(elemento of arrayProdutos){
-        //   console.log(elemento);
+        //   console.log(elemento);F
         // }
 
       }
